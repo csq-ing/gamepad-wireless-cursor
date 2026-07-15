@@ -1,0 +1,14 @@
+CompileFlags:
+  Remove:
+    [
+      -mlongcalls,
+      -mdisable-hardware-atomics,
+      -fno-shrink-wrap,
+      -fstrict-volatile-bitfields,
+      -fno-tree-switch-conversion,
+      -fzero-init-padding-bits,
+      -fno-malloc-dce,
+    ]
+CompilationDatabase: C:/Users/csq/Desktop/gamepad-wireless-cursor-wireless-gamepad/controller/build
+Diagnostics:
+  Suppress: [-Werror, -Wunused-lambda-capture]

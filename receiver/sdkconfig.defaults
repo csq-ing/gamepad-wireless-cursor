@@ -1,0 +1,13 @@
+CONFIG_IDF_TARGET="esp32s2"
+
+# Enable built-in HID class for the configuration channel
+CONFIG_TINYUSB_HID_COUNT=1
+
+# Wi-Fi (needed for ESP-NOW, no AP connection required)
+CONFIG_ESP_WIFI_SOFTAP_SUPPORT=n
+
+# ESP-NOW security responder requires protocomm security v1
+CONFIG_ESP_PROTOCOMM_SUPPORT_SECURITY_VERSION_1=y
+
+# Forward ESP_LOG to controller via ESP-NOW (set to n to disable)
+CONFIG_REMOTE_LOG_ENABLE=n

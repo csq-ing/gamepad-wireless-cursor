@@ -1,0 +1,35 @@
+menu "Remote Log"
+    config REMOTE_LOG_ENABLE
+        bool "Forward ESP_LOG output to controller via ESP-NOW"
+        default y
+        help
+            When enabled, all ESP_LOG output is forwarded over ESP-NOW
+            to the controller board, which prints it on its serial console.
+            Useful when the receiver USB port is occupied by HID.
+endmenu
+
+menu "XInput USB Gamepad"
+
+    config XINPUT_DEV_VID
+        hex "Development USB VID"
+        default 0xCAFE
+        help
+            Development-validation VID only.
+            Do not ship production hardware with this value.
+
+    config XINPUT_DEV_PID
+        hex "Development USB PID"
+        default 0x4012
+        help
+            Development-validation PID only.
+            Do not ship production hardware with this value.
+
+    config XINPUT_POLL_MS
+        int "Input report / endpoint polling period (ms)"
+        range 1 100
+        default 8
+        help
+            Interrupt endpoint polling interval. Also used as the
+            bInterval value in both IN and OUT endpoint descriptors.
+
+endmenu

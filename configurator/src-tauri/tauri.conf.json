@@ -1,0 +1,33 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Gamepad Receiver Configurator",
+  "version": "0.1.0",
+  "identifier": "com.openai.gamepad.receiver.configurator",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build",
+    "devUrl": "http://localhost:1420",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "label": "main",
+        "title": "Gamepad Receiver Configurator",
+        "width": 1280,
+        "height": 780,
+        "minWidth": 960,
+        "minHeight": 680,
+        "resizable": true,
+        "decorations": false
+      }
+    ]
+  },
+  "bundle": {
+    "active": true,
+    "targets": "nsis",
+    "windows": {
+      "digestAlgorithm": "sha256"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+menu "Remote Log"
+    config REMOTE_LOG_ENABLE
+        bool "Print log messages received from the receiver via ESP-NOW"
+        default y
+        help
+            When enabled, the controller prints log lines forwarded by
+            the receiver over ESP-NOW to its serial console.
+endmenu

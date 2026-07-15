@@ -1,0 +1,37 @@
+{
+  "name": "receiver-configurator",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 1420",
+    "test": "npm run test:sidebar-navigation && npm run test:stick-config && npm run test:ai-pull-manual-send",
+    "test:ai-pull-manual-send": "node --test tests/aiPullManualSend.test.mjs",
+    "test:connection-action": "tsc src/connectionAction.ts src/overviewValueTone.ts src/types.ts --module ESNext --target ES2020 --moduleResolution Bundler --outDir .tmp-tests && node --test tests/connectionAction.test.mjs tests/overviewValueTone.test.mjs",
+    "test:sidebar-navigation": "node --test tests/sidebarNavigation.test.mjs",
+    "test:stick-config": "node --test tests/stickConfigPanel.test.mjs",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "tauri:dev": "tauri dev",
+    "tauri:build": "tauri build"
+  },
+  "dependencies": {
+    "@react-three/drei": "^9.121.4",
+    "@react-three/fiber": "^8.17.10",
+    "@tauri-apps/api": "^2.0.0",
+    "lucide-react": "^0.546.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "three": "^0.184.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.14",
+    "@tauri-apps/cli": "^2.0.0",
+    "@types/three": "^0.184.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.2",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.10"
+  }
+}

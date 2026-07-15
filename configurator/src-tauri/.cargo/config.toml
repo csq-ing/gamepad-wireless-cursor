@@ -1,0 +1,9 @@
+[env]
+OPENCV_INCLUDE_PATHS = "D:\\librarys\\opencv\\build\\include"
+OPENCV_LINK_PATHS = "D:\\librarys\\opencv\\build\\x64\\vc14\\lib"
+OPENCV_LINK_LIBS = "opencv_world452"
+OPENCV_CLANG_ARGS = "-D_ALLOW_COMPILER_AND_STL_VERSION_MISMATCH"
+LIBCLANG_PATH = "D:\\LLVM\\bin"
+
+[target.x86_64-pc-windows-msvc]
+runner = ["powershell", "-NoProfile", "-ExecutionPolicy", "Bypass", "-File", ".cargo\\run-with-opencv.ps1"]

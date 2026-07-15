@@ -1,0 +1,14 @@
+CONFIG_IDF_TARGET="esp32s3"
+
+# Wi-Fi (needed for ESP-NOW, no AP connection required)
+CONFIG_ESP_WIFI_SOFTAP_SUPPORT=n
+
+# ESP-NOW security responder requires protocomm security v1
+CONFIG_ESP_PROTOCOMM_SUPPORT_SECURITY_VERSION_1=y
+
+# Print remote log messages from receiver (set to n to disable)
+CONFIG_REMOTE_LOG_ENABLE=n
+
+# Match the 16 MB flash fitted on the board so the image header is correct.
+CONFIG_ESPTOOLPY_FLASHSIZE_16MB=y
+CONFIG_ESPTOOLPY_FLASHSIZE="16MB"
